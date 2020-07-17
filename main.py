@@ -4,7 +4,7 @@ class ScoreGet:
     def __init__(self):
         self.url_get_all_matches="https://cricapi.com/api/matches"
         self.get_score= "https://cricapi.com/api/cricketScore"
-        self.apikey = "RbOHylLS89SAhJVN78CVgWTqeHm2"
+        self.apikey = "apikey"
         self.unique_id = ""
     def get_unique_id(self):
         uri_params = {"apikey":self.apikey}
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     obj = ScoreGet()
     message = obj.get_unique_id()
     from twilio.rest import Client
-    a_sid="AC961c7e922c579190addb30586941e778"
-    auth_token = "4776478985f3029a019cf1a0b949d964"
+    a_sid="sid"
+    auth_token = "token"
     client = Client(a_sid,auth_token)
-    m = client.messages.create(body=message,from_="whatsapp:+14155238886",to="whatsapp:+917303342255")
+    m = client.messages.create(body=message,from_="whatsapp:+14155238886",to="whatsapp:+number")
